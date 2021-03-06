@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="581.0" prefWidth="794.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sommatif.SampleController">
+   <children>
+      <TabPane layoutX="-1.0" layoutY="-1.0" prefHeight="581.0" prefWidth="794.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Accueil et Index">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text fill="#3700fc" layoutX="23.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convertisseur d'unité" textAlignment="CENTER" underline="true" wrappingWidth="748.2060546875">
+                           <font>
+                              <Font name="American Typewriter" size="36.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="17.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bonjour, vous avez ouvert un convertisseur d'unité. Pour utiliser ce convertisseur, cliquez simplement sur l'onglet ci-dessus qui décrit le type d'unités que vous souhaitez convertir. En dessous, vous trouverez une liste du contenu de chaque onglet. Si vous ne cherchez à convertir aucune unité, veuillez appuyer sur &quot;Fermer&quot;." textAlignment="CENTER" wrappingWidth="760.7353515625">
+                           <font>
+                              <Font name="American Typewriter Light" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="RED" layoutX="14.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Index:" wrappingWidth="220.2060546875">
+                           <font>
+                              <Font name="American Typewriter Light" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#111111" layoutX="6.0" layoutY="213.0" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1) Longeur: Système métrique au système impérial" wrappingWidth="438.2060546875">
+                           <font>
+                              <Font name="American Typewriter Light" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#111111" layoutX="6.0" layoutY="231.0" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2) Masse: Système métrique au système impérial" wrappingWidth="438.2060546875">
+                           <font>
+                              <Font name="American Typewriter Light" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#111111" layoutX="6.0" layoutY="249.0" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3) Volume: Système métrique au système impérial" wrappingWidth="438.2060546875">
+                           <font>
+                              <Font name="American Typewriter Light" size="14.0" />
+                           </font>
+                        </Text>
+                        <Button cancelButton="true" layoutX="709.0" layoutY="502.0" mnemonicParsing="false" onAction="#Fermer" prefHeight="32.0" prefWidth="77.0" text="Fermer">
+                           <font>
+                              <Font name="American Typewriter Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="Longeur" text="Longeur">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="LongeurVN" layoutX="22.0" layoutY="212.0" prefHeight="79.0" prefWidth="306.0" promptText="Valeur numérique:">
+                           <font>
+                              <Font name="American Typewriter Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="LongeurSM" layoutX="22.0" layoutY="291.0" prefHeight="49.0" prefWidth="305.0" promptText="Système Métrique" />
+                        <ComboBox fx:id="LongeurSI" layoutX="469.0" layoutY="291.0" prefHeight="49.0" prefWidth="305.0" promptText="Système Impérial" />
+                        <Text fill="RED" layoutX="371.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="⇆" textAlignment="CENTER" wrappingWidth="52.2060546875">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="BFL" cancelButton="true" layoutX="709.0" layoutY="502.0" mnemonicParsing="false" onAction="#Fermer" prefHeight="32.0" prefWidth="77.0" text="Fermer">
+                           <font>
+                              <Font name="American Typewriter Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Text fill="#012bfc" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Longeur:" underline="true">
+                           <font>
+                              <Font name="American Typewriter" size="48.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="LSMaLSI" layoutX="363.0" layoutY="302.0" mnemonicParsing="false" onAction="#CalculLongeur" text="Calculer" />
+                        <TextField fx:id="LongeurC" layoutX="469.0" layoutY="212.0" prefHeight="79.0" prefWidth="306.0" promptText="Valeur numérique:">
+                           <font>
+                              <Font name="American Typewriter Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="LSIaLSM" layoutX="363.0" layoutY="225.0" mnemonicParsing="false" onAction="#CalculLongeur2" text="Calculer" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="Masse" text="Masse">
+              <content>
+                <AnchorPane fx:id="BF2" minHeight="0.0" minWidth="0.0" prefHeight="79.0" prefWidth="306.0">
+                     <children>
+                        <TextField fx:id="MasseVN" layoutX="22.0" layoutY="212.0" prefHeight="79.0" prefWidth="306.0" promptText="Valeur numérique:">
+                           <font>
+                              <Font name="American Typewriter Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="MasseSM" layoutX="23.0" layoutY="291.0" prefHeight="49.0" prefWidth="305.0" promptText="Système Métrique" />
+                        <ComboBox fx:id="MasseSI" layoutX="470.0" layoutY="291.0" prefHeight="49.0" prefWidth="305.0" promptText="Système Impérial" />
+                        <Text fill="#ff0303" layoutX="371.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="⇆" textAlignment="CENTER" wrappingWidth="51.2060546875">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="BFM" cancelButton="true" layoutX="709.0" layoutY="502.0" mnemonicParsing="false" onAction="#Fermer" prefHeight="32.0" prefWidth="77.0" text="Fermer">
+                           <font>
+                              <Font name="American Typewriter Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Text fill="#1c03f8" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masse:" underline="true">
+                           <font>
+                              <Font name="American Typewriter" size="48.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="MasseC" layoutX="470.0" layoutY="212.0" prefHeight="79.0" prefWidth="306.0" promptText="Valeur numérique:">
+                           <font>
+                              <Font name="American Typewriter Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="MSMaMSI" layoutX="363.0" layoutY="302.0" mnemonicParsing="false" onAction="#CalculMasse" text="Calculer" />
+                        <Button fx:id="MSIaMSM" layoutX="363.0" layoutY="225.0" mnemonicParsing="false" onAction="#CalculMasse2" text="Calculer" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="Volume" text="Volume">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="VolumeVN" editable="false" layoutX="22.0" layoutY="212.0" prefHeight="79.0" prefWidth="305.0" promptText="Valeur numérique:">
+                           <font>
+                              <Font name="American Typewriter Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <ComboBox fx:id="VolumeSM" layoutX="22.0" layoutY="291.0" prefHeight="49.0" prefWidth="305.0" promptText="Système Métrique" />
+                        <ComboBox fx:id="VolumeSI" layoutX="469.0" layoutY="291.0" prefHeight="49.0" prefWidth="305.0" promptText="Système Impérial" />
+                        <Button fx:id="BFV" cancelButton="true" layoutX="709.0" layoutY="502.0" mnemonicParsing="false" onAction="#Fermer" prefHeight="32.0" prefWidth="77.0" text="Fermer">
+                           <font>
+                              <Font name="American Typewriter Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Text fill="#1100ff" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Volume:" underline="true">
+                           <font>
+                              <Font name="American Typewriter" size="48.0" />
+                           </font>
+                        </Text>
+                        <Text fill="RED" layoutX="371.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="⇆" textAlignment="CENTER" wrappingWidth="52.2060546875">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="VolumeC" editable="false" layoutX="469.0" layoutY="212.0" prefHeight="79.0" prefWidth="305.0" promptText="Valeur numérique:">
+                           <font>
+                              <Font name="American Typewriter Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="VSMaVSI" layoutX="363.0" layoutY="302.0" mnemonicParsing="false" onAction="#CalculVolume" text="Calculer" />
+                        <Button fx:id="VSIaVSM" layoutX="363.0" layoutY="225.0" mnemonicParsing="false" onAction="#CalculVolume2" text="Calculer" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
